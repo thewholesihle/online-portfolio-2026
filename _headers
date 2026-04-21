@@ -1,0 +1,7 @@
+# Netlify / Cloudflare Pages — hot-link protection for all assets
+/assets/*
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/favicon.ico
+  Cache-Control: public, max-age=86400

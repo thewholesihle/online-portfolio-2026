@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>404 — Sihle Bomela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0a0a;
+  --fg: #f0ede8;
+  --fg-dim: rgba(240,237,232,0.38);
+  --fg-mid: rgba(240,237,232,0.65);
+  --border: rgba(240,237,232,0.1);
+}
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Urbanist', sans-serif;
+  overflow: hidden;
+}
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.wrap {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+.code {
+  font-size: clamp(100px, 20vw, 200px);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+  color: var(--fg);
+  opacity: 0.06;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 28px;
+}
+h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--fg-mid);
+  max-width: 360px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+a.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+a.home-link:hover {
+  background: rgba(240,237,232,0.06);
+  border-color: rgba(240,237,232,0.3);
+}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="wrap">
+  <div class="code">404</div>
+  <div class="tag">Page not found</div>
+  <h1>Nothing here.</h1>
+  <p>The page you're looking for doesn't exist or has been moved.</p>
+  <a href="/" class="home-link">← Back home</a>
+</div>
+<script>
+(function() {
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d');
+  const SPACING = 80, SIZE = 6, OPACITY = 0.1;
+  let tick = 0, raf;
+  function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const cols = Math.ceil(canvas.width / SPACING) + 1;
+    const rows = Math.ceil(canvas.height / SPACING) + 1;
+    const offX = (canvas.width % SPACING) / 2;
+    const offY = (canvas.height % SPACING) / 2;
+    for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+      const x = offX + c * SPACING, y = offY + r * SPACING;
+      const alpha = OPACITY * (0.55 + 0.45 * Math.sin(tick * 0.004 + (r * cols + c) * 0.37));
+      ctx.save(); ctx.globalAlpha = alpha; ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 0.8;
+      ctx.beginPath(); ctx.moveTo(x - SIZE, y); ctx.lineTo(x + SIZE, y);
+      ctx.moveTo(x, y - SIZE); ctx.lineTo(x, y + SIZE); ctx.stroke(); ctx.restore();
+    }
+    tick++; raf = requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>

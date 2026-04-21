@@ -1,0 +1,17 @@
+# Local CMS — DO NOT deploy these to your static host
+admin/
+server.js
+package.json
+node_modules/
+.claude/
+
+# Content managed by CMS (deploy content.json separately after publishing)
+# content.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
