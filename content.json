@@ -13,9 +13,9 @@
     "font": "Urbanist",
     "fontUrl": "https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap",
     "bodyFont": "Urbanist",
-    "bodyFontUrl": "https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap",
+    "bodyFontUrl": "https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap",
     "headingFont": "Clash Display",
-    "headingFontUrl": "https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap",
+    "headingFontUrl": "https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap",
     "theme": {
       "bg": "#0c0c14",
       "fg": "#e8e8f5"
@@ -136,7 +136,7 @@
     "copyright": "Sihle Bomela"
   },
   "maintenance": {
-    "enabled": true,
+    "enabled": false,
     "heading": "Back soon.",
     "message": "Something great is on its way. In the meantime, reach out directly.",
     "email": "hey@thewholesihle"
@@ -164,6 +164,119 @@
           "ratio": "1/1",
           "span": "third",
           "src": "/assets/images/p1_hzej6ps.webp"
+        },
+        {
+          "id": "pe0l003",
+          "label": "wh staggered lookbook2",
+          "ratio": "1/1",
+          "span": "third",
+          "src": "/assets/images/p1_pe0l003.webp"
+        },
+        {
+          "id": "25rnhlo",
+          "label": "wh star mockup",
+          "ratio": "1/1",
+          "span": "third",
+          "src": "/assets/images/p1_25rnhlo.webp"
+        },
+        {
+          "id": "fc0h057",
+          "label": "wh yellow star photo",
+          "ratio": "1/1",
+          "span": "third",
+          "src": "/assets/images/p1_fc0h057.webp"
+        }
+      ]
+    },
+    {
+      "id": "1fb020p",
+      "name": "NTTM x Others.",
+      "type": "Presentation",
+      "year": "2025",
+      "role": "",
+      "duration": "2 Weeks",
+      "desc": "",
+      "images": [
+        {
+          "id": "4o7oo4e",
+          "label": "Untitled",
+          "ratio": "1/1",
+          "span": "half",
+          "src": "/assets/images/1fb020p_4o7oo4e.webp"
+        },
+        {
+          "id": "bhusxlc",
+          "label": "Untitled",
+          "ratio": "1/1",
+          "span": "half",
+          "src": "/assets/images/1fb020p_bhusxlc.jpg"
+        },
+        {
+          "id": "noh0ktr",
+          "label": "Untitled",
+          "ratio": "1/1",
+          "span": "half",
+          "src": "/assets/images/1fb020p_noh0ktr.webp"
+        },
+        {
+          "id": "zyd71zp",
+          "label": "Untitled",
+          "ratio": "1/1",
+          "span": "half",
+          "src": "/assets/images/1fb020p_zyd71zp.webp"
+        },
+        {
+          "id": "6hor5km",
+          "label": "Untitled",
+          "ratio": "1/1",
+          "span": "third",
+          "src": "/assets/images/1fb020p_6hor5km.webp"
+        },
+        {
+          "id": "c36eo23",
+          "label": "Untitled",
+          "ratio": "1/1",
+          "span": "third",
+          "src": "/assets/images/1fb020p_c36eo23.webp"
+        }
+      ]
+    },
+    {
+      "id": "hhhoiky",
+      "name": "Ploum",
+      "type": "Logo Identity",
+      "year": "2025",
+      "role": "Logo Design",
+      "duration": "2 Weeks",
+      "desc": "",
+      "images": [
+        {
+          "id": "uqt43oj",
+          "label": "sample exec",
+          "ratio": "16/9",
+          "span": "full",
+          "src": "/assets/images/hhhoiky_uqt43oj.webp"
+        },
+        {
+          "id": "4xskz5x",
+          "label": "colors",
+          "ratio": "16/9",
+          "span": "third",
+          "src": "/assets/images/hhhoiky_4xskz5x.webp"
+        },
+        {
+          "id": "06j9w73",
+          "label": "image treat demo",
+          "ratio": "16/9",
+          "span": "third",
+          "src": "/assets/images/hhhoiky_06j9w73.webp"
+        },
+        {
+          "id": "xelfnjy",
+          "label": "overall logo",
+          "ratio": "16/9",
+          "span": "third",
+          "src": "/assets/images/hhhoiky_xelfnjy.webp"
         }
       ]
     }

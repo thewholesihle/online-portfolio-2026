@@ -565,6 +565,15 @@ function MaintenancePage({ content }) {
           <p className="maint-msg">{maintenance.message}</p>
         )}
         <a href={`mailto:${email}`} className="maint-email">{email}</a>
+        {contact.socials?.filter(s => s.url).length > 0 && (
+          <div className="maint-socials">
+            {contact.socials.filter(s => s.url).map(s => (
+              <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer" className="maint-social-link" title={s.label}>
+                {ICONS[s.icon]}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
