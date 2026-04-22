@@ -136,10 +136,10 @@
     "copyright": "Sihle Bomela"
   },
   "maintenance": {
-    "enabled": false,
+    "enabled": true,
     "heading": "Back soon.",
     "message": "Something great is on its way. In the meantime, reach out directly.",
-    "email": "hey@thewholesihle"
+    "email": "hey@thewholesihle.com"
   },
   "projects": [
     {
